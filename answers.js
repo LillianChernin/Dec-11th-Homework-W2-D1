@@ -167,8 +167,8 @@ for (let i = 0; i < bondFilms.length; i++) {
 console.log(bondTitles);
 
 
-//Per the wording of the question I am assuming that the entire film object of the odd-numbered
-//year bond films should be on the oddBonds array (not just the title like in the last problem)
+// Per the wording of the question I am assuming that the entire film object of the odd-numbered
+// year bond films should be on the oddBonds array (not just the title like in the last problem)
 const oddBonds = [];
 
 for (let i = 0; i < bondFilms.length; i++) {
@@ -185,3 +185,35 @@ for (let i = 0; i < bondFilms.length; i++) {
 }
 
 console.log(bondFranchiseGross);
+
+// Answer to Hungry For More?
+const determineMostInfrequentBond = () => {
+  const bondActorFrequency = {}
+  for (let i = 0; i < bondFilms.length; i++) {
+    let matchCount = 0;
+    for (let key in bondActorFrequency) {
+      if (bondFilms[i]["actor"] === key) {
+        bondActorFrequency[key] = bondActorFrequency[key] + 1;
+        matchCount++;
+      }
+    }
+    if (matchCount === 0) {
+      bondActorFrequency[bondFilms[i]["actor"]] = 1;
+    }
+  }
+  let actorInLeastFilms = "";
+  let leastNumOfFilms = bondFilms.length;
+  for (let key in bondActorFrequency) {
+    if (leastNumOfFilms > bondActorFrequency[key]) {
+      actorInLeastFilms = key;
+      leastNumOfFilms = bondActorFrequency[key]
+    }
+  }
+  for (let i = 0; i < bondFilms.length; i++) {
+    if (bondFilms[i]["actor"] === actorInLeastFilms) {
+      return bondFilms[i];
+    }
+  }
+}
+
+determineMostInfrequentBond();
