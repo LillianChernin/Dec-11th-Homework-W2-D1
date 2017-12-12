@@ -176,3 +176,12 @@ for (let i = 0; i < bondFilms.length; i++) {
     oddBonds.push(bondFilms[i]);
   }
 }
+let bondFranchiseGross = 0;
+
+for (let i = 0; i < bondFilms.length; i++) {
+  let gross = bondFilms[i]["gross"].split(",").join("");
+  let updatedGross = Number(gross.slice(1, gross.length));
+  bondFranchiseGross = bondFranchiseGross + updatedGross;
+}
+
+console.log(bondFranchiseGross);
