@@ -165,3 +165,14 @@ for (let i = 0; i < bondFilms.length; i++) {
 }
 
 console.log(bondTitles);
+
+
+//Per the wording of the question I am assuming that the entire film object of the odd-numbered
+//year bond films should be on the oddBonds array (not just the title like in the last problem)
+const oddBonds = [];
+
+for (let i = 0; i < bondFilms.length; i++) {
+  if (bondFilms[i]["year"] % 2 !== 0) {
+    oddBonds.push(bondFilms[i]);
+  }
+}
