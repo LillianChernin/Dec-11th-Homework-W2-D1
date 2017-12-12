@@ -107,3 +107,7 @@ console.log(crazyObject.larry.nicknames[1]);
 
 // 5.
 console.log(crazyObject.larry.characters[1]);
+
+// Answer for Object-ception
+
+inception.reality.dreamLayer1.dreamLayer2.dreamLayer3.dreamLayer4.dreamLayer5.dreamLayer6.limbo = null;
