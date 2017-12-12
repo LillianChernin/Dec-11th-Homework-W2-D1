@@ -10,7 +10,7 @@ const userEmail = "user@emaildomain.com";
 // Or a key/value pair on an object (with the value equal to a string representing
 // the email address):
 const user = {
-  emailAddress: "user@emaildomain.com";
+  emailAddress: "user@emaildomain.com"
 }
 
 // 3.
@@ -45,3 +45,22 @@ const studentNames3 = [
   {name: "Fred", location: "Nashville, TN", favTvShows: ["Murder She Wrote", "Stranger Things"]},
   {name: "Tim", location: "Nashville, TN", favTvShows: ["60 Minutes", "Law and Order"]}
 ]
+
+// Answers for Take it Easy
+
+// 1.
+const rainbowColors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+
+// 2.
+rainbowColors[4];
+
+// 3.
+const lillian = {
+  favoriteFood: "Curry",
+  hobby: "play piano",
+  hometown: "Austin, TX",
+  favoriteDatatype: "Array"
+}
+
+// 4.
+lillian.hobby;
